@@ -6,8 +6,8 @@ proto_ns.fields = {SourcePort, DestinationPort, Checksum}
 function proto_ns.dissector(buffer, pinfo, tree)
     pinfo.cols.protocol = "Nissim53"
     local payload_tree = tree:add( proto_ns, buffer() )
-    local src_pos = 1
-    local src_len = 1
+    local src_pos = 0
+    local src_len = 2
     local src_buffer = buffer(src_pos,src_len)
     payload_tree:add(SourcePort, src_buffer)
     local dst_pos = src_pos + src_len

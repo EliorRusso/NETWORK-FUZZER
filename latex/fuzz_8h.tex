@@ -1,0 +1,433 @@
+\hypertarget{fuzz_8h}{}\doxysection{Fuzzing/fuzz.h File Reference}
+\label{fuzz_8h}\index{Fuzzing/fuzz.h@{Fuzzing/fuzz.h}}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{fuzz_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structethdr}{ethdr}}
+\item 
+struct \mbox{\hyperlink{structiphr}{iphr}}
+\item 
+struct \mbox{\hyperlink{structudpheader}{udpheader}}
+\item 
+struct \mbox{\hyperlink{structnissim53}{nissim53}}
+\item 
+struct \mbox{\hyperlink{structtcpheader}{tcpheader}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{fuzz_8h_a9822d89774e0d6ddaa06503950130423}{ETH\+\_\+\+ALEN}}~6
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structethdr}{ethdr}} \mbox{\hyperlink{fuzz_8h_aedb4cb9f89854db4e7d506417239aa9e}{\+\_\+\+\_\+attribute\+\_\+\+\_\+}} ((packed))
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+unsigned char \mbox{\hyperlink{fuzz_8h_a4ed9730824f0fec5b744ab5c58090101}{h\+\_\+dest}} \mbox{[}\mbox{\hyperlink{sniffer_8c_a9822d89774e0d6ddaa06503950130423}{ETH\+\_\+\+ALEN}}\mbox{]}
+\item 
+unsigned char \mbox{\hyperlink{fuzz_8h_a97dd3055fe7dd35d5e54aced21ed67d3}{h\+\_\+source}} \mbox{[}\mbox{\hyperlink{sniffer_8c_a9822d89774e0d6ddaa06503950130423}{ETH\+\_\+\+ALEN}}\mbox{]}
+\item 
+\+\_\+\+\_\+be16 \mbox{\hyperlink{fuzz_8h_a5d2bbedddf19ed1808cb7ba336defcc7}{h\+\_\+proto}}
+\item 
+unsigned int \mbox{\hyperlink{fuzz_8h_a6b000e4871078da77b2555e67f117cc5}{ihl}}
+\item 
+unsigned int \mbox{\hyperlink{fuzz_8h_a5408ac5df4c170828874e1b10b4c35a0}{version}}
+\item 
+unsigned int \mbox{\hyperlink{fuzz_8h_a0acab3581af23d3d6376dec4e3a9f5be}{Type\+Of\+Service}}
+\item 
+unsigned int \mbox{\hyperlink{fuzz_8h_a8de3f2b2e7d406967c9f5ed96ad1322d}{Total\+Length}}
+\item 
+unsigned int \mbox{\hyperlink{fuzz_8h_a530582fa3defdb251dbe926d7dcf801f}{Identification}}
+\item 
+unsigned int \mbox{\hyperlink{fuzz_8h_aab26dfdb00989381986a57201e6adff1}{Flags}}
+\item 
+unsigned int \mbox{\hyperlink{fuzz_8h_a410a613c3bcb841415192cfb48b8a1e5}{Fragment\+Offset}}
+\item 
+unsigned int \mbox{\hyperlink{fuzz_8h_a98a9a765cb7353be09b0be530a704fc0}{Ttl}}
+\item 
+unsigned int \mbox{\hyperlink{fuzz_8h_a0ee641fb4ed6e33cdce57a24ed0eda82}{Protocol}}
+\item 
+unsigned int \mbox{\hyperlink{fuzz_8h_ab13d4931e484995319d4a087418467c0}{Header\+Checksum}}
+\item 
+unsigned int \mbox{\hyperlink{fuzz_8h_aa1fd9ce3b4c24ea724f1eb45ede7289d}{Source\+Addr}}
+\item 
+unsigned int \mbox{\hyperlink{fuzz_8h_a4807fe1098d1415ea86a4e2ac4535739}{Dest\+Addr}}
+\item 
+unsigned int \mbox{\hyperlink{fuzz_8h_a7585fc7e25fb1fd6535d22999015dca5}{Source\+Port}}
+\item 
+unsigned int \mbox{\hyperlink{fuzz_8h_a921229250be354242e65e376cd807693}{Destination\+Port}}
+\item 
+unsigned int \mbox{\hyperlink{fuzz_8h_a8740c60c5e3f07190370c4dc29773a4d}{Length}}
+\item 
+unsigned int \mbox{\hyperlink{fuzz_8h_ad73459b8cefa85f7c8fdd794f0a67b4c}{Checksum}}
+\item 
+unsigned int \mbox{\hyperlink{fuzz_8h_a40226d0364c72184ed5f3624063107f2}{Sequence\+Number}}
+\item 
+unsigned int \mbox{\hyperlink{fuzz_8h_a72437b09095a073a77f3a478dd285bae}{Ack\+Number}}
+\item 
+unsigned int \mbox{\hyperlink{fuzz_8h_a1ceb3ccb60ee6dfb0980fc01ec279e5a}{Data\+Offset}}
+\item 
+unsigned int \mbox{\hyperlink{fuzz_8h_ac132425a70f39fe07667cecb77969764}{Reserved}}
+\item 
+unsigned int \mbox{\hyperlink{fuzz_8h_a075419be997ebe1b01523c63f350c901}{Urg}}
+\item 
+unsigned int \mbox{\hyperlink{fuzz_8h_a9e420d7f0b2a4ef6b6d6014f0b191a85}{Ack}}
+\item 
+unsigned int \mbox{\hyperlink{fuzz_8h_a5abafcbeb662fbf7463210ec1057b082}{Psh}}
+\item 
+unsigned int \mbox{\hyperlink{fuzz_8h_a0287739b9c7e42fd58b582dc5686a1a2}{Rst}}
+\item 
+unsigned int \mbox{\hyperlink{fuzz_8h_a6822915e5d67832a6909f34a4ce3a61b}{Syn}}
+\item 
+unsigned int \mbox{\hyperlink{fuzz_8h_a4de42bb2d561a69865e5d48b4d201a10}{Fin}}
+\item 
+short int \mbox{\hyperlink{fuzz_8h_ae06f064bf45f9a9134c4d5ac68ef67e8}{Window}}
+\item 
+short int \mbox{\hyperlink{fuzz_8h_a1358d5aad990c5be1f1f9feede14d966}{Urgent\+Pointer}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{fuzz_8h_a9822d89774e0d6ddaa06503950130423}\label{fuzz_8h_a9822d89774e0d6ddaa06503950130423}} 
+\index{fuzz.h@{fuzz.h}!ETH\_ALEN@{ETH\_ALEN}}
+\index{ETH\_ALEN@{ETH\_ALEN}!fuzz.h@{fuzz.h}}
+\doxysubsubsection{\texorpdfstring{ETH\_ALEN}{ETH\_ALEN}}
+{\footnotesize\ttfamily \#define ETH\+\_\+\+ALEN~6}
+
+
+
+Definition at line 1 of file fuzz.\+h.
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{fuzz_8h_aedb4cb9f89854db4e7d506417239aa9e}\label{fuzz_8h_aedb4cb9f89854db4e7d506417239aa9e}} 
+\index{fuzz.h@{fuzz.h}!\_\_attribute\_\_@{\_\_attribute\_\_}}
+\index{\_\_attribute\_\_@{\_\_attribute\_\_}!fuzz.h@{fuzz.h}}
+\doxysubsubsection{\texorpdfstring{\_\_attribute\_\_()}{\_\_attribute\_\_()}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{structtcpheader}{tcpheader}} \+\_\+\+\_\+attribute\+\_\+\+\_\+ (\begin{DoxyParamCaption}\item[{(packed)}]{ }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{fuzz_8h_a9e420d7f0b2a4ef6b6d6014f0b191a85}\label{fuzz_8h_a9e420d7f0b2a4ef6b6d6014f0b191a85}} 
+\index{fuzz.h@{fuzz.h}!Ack@{Ack}}
+\index{Ack@{Ack}!fuzz.h@{fuzz.h}}
+\doxysubsubsection{\texorpdfstring{Ack}{Ack}}
+{\footnotesize\ttfamily unsigned int Ack}
+
+
+
+Definition at line 7 of file fuzz.\+h.
+
+\mbox{\Hypertarget{fuzz_8h_a72437b09095a073a77f3a478dd285bae}\label{fuzz_8h_a72437b09095a073a77f3a478dd285bae}} 
+\index{fuzz.h@{fuzz.h}!AckNumber@{AckNumber}}
+\index{AckNumber@{AckNumber}!fuzz.h@{fuzz.h}}
+\doxysubsubsection{\texorpdfstring{AckNumber}{AckNumber}}
+{\footnotesize\ttfamily unsigned int Ack\+Number}
+
+
+
+Definition at line 3 of file fuzz.\+h.
+
+\mbox{\Hypertarget{fuzz_8h_ad73459b8cefa85f7c8fdd794f0a67b4c}\label{fuzz_8h_ad73459b8cefa85f7c8fdd794f0a67b4c}} 
+\index{fuzz.h@{fuzz.h}!Checksum@{Checksum}}
+\index{Checksum@{Checksum}!fuzz.h@{fuzz.h}}
+\doxysubsubsection{\texorpdfstring{Checksum}{Checksum}}
+{\footnotesize\ttfamily short int Checksum}
+
+
+
+Definition at line 3 of file fuzz.\+h.
+
+\mbox{\Hypertarget{fuzz_8h_a1ceb3ccb60ee6dfb0980fc01ec279e5a}\label{fuzz_8h_a1ceb3ccb60ee6dfb0980fc01ec279e5a}} 
+\index{fuzz.h@{fuzz.h}!DataOffset@{DataOffset}}
+\index{DataOffset@{DataOffset}!fuzz.h@{fuzz.h}}
+\doxysubsubsection{\texorpdfstring{DataOffset}{DataOffset}}
+{\footnotesize\ttfamily unsigned int Data\+Offset}
+
+
+
+Definition at line 4 of file fuzz.\+h.
+
+\mbox{\Hypertarget{fuzz_8h_a4807fe1098d1415ea86a4e2ac4535739}\label{fuzz_8h_a4807fe1098d1415ea86a4e2ac4535739}} 
+\index{fuzz.h@{fuzz.h}!DestAddr@{DestAddr}}
+\index{DestAddr@{DestAddr}!fuzz.h@{fuzz.h}}
+\doxysubsubsection{\texorpdfstring{DestAddr}{DestAddr}}
+{\footnotesize\ttfamily unsigned int Dest\+Addr}
+
+
+
+Definition at line 16 of file fuzz.\+h.
+
+\mbox{\Hypertarget{fuzz_8h_a921229250be354242e65e376cd807693}\label{fuzz_8h_a921229250be354242e65e376cd807693}} 
+\index{fuzz.h@{fuzz.h}!DestinationPort@{DestinationPort}}
+\index{DestinationPort@{DestinationPort}!fuzz.h@{fuzz.h}}
+\doxysubsubsection{\texorpdfstring{DestinationPort}{DestinationPort}}
+{\footnotesize\ttfamily short int Destination\+Port}
+
+
+
+Definition at line 1 of file fuzz.\+h.
+
+\mbox{\Hypertarget{fuzz_8h_a4de42bb2d561a69865e5d48b4d201a10}\label{fuzz_8h_a4de42bb2d561a69865e5d48b4d201a10}} 
+\index{fuzz.h@{fuzz.h}!Fin@{Fin}}
+\index{Fin@{Fin}!fuzz.h@{fuzz.h}}
+\doxysubsubsection{\texorpdfstring{Fin}{Fin}}
+{\footnotesize\ttfamily unsigned int Fin}
+
+
+
+Definition at line 11 of file fuzz.\+h.
+
+\mbox{\Hypertarget{fuzz_8h_aab26dfdb00989381986a57201e6adff1}\label{fuzz_8h_aab26dfdb00989381986a57201e6adff1}} 
+\index{fuzz.h@{fuzz.h}!Flags@{Flags}}
+\index{Flags@{Flags}!fuzz.h@{fuzz.h}}
+\doxysubsubsection{\texorpdfstring{Flags}{Flags}}
+{\footnotesize\ttfamily unsigned int Flags}
+
+
+
+Definition at line 10 of file fuzz.\+h.
+
+\mbox{\Hypertarget{fuzz_8h_a410a613c3bcb841415192cfb48b8a1e5}\label{fuzz_8h_a410a613c3bcb841415192cfb48b8a1e5}} 
+\index{fuzz.h@{fuzz.h}!FragmentOffset@{FragmentOffset}}
+\index{FragmentOffset@{FragmentOffset}!fuzz.h@{fuzz.h}}
+\doxysubsubsection{\texorpdfstring{FragmentOffset}{FragmentOffset}}
+{\footnotesize\ttfamily unsigned int Fragment\+Offset}
+
+
+
+Definition at line 11 of file fuzz.\+h.
+
+\mbox{\Hypertarget{fuzz_8h_a4ed9730824f0fec5b744ab5c58090101}\label{fuzz_8h_a4ed9730824f0fec5b744ab5c58090101}} 
+\index{fuzz.h@{fuzz.h}!h\_dest@{h\_dest}}
+\index{h\_dest@{h\_dest}!fuzz.h@{fuzz.h}}
+\doxysubsubsection{\texorpdfstring{h\_dest}{h\_dest}}
+{\footnotesize\ttfamily unsigned char h\+\_\+dest\mbox{[}\mbox{\hyperlink{sniffer_8c_a9822d89774e0d6ddaa06503950130423}{ETH\+\_\+\+ALEN}}\mbox{]}}
+
+
+
+Definition at line 0 of file fuzz.\+h.
+
+\mbox{\Hypertarget{fuzz_8h_a5d2bbedddf19ed1808cb7ba336defcc7}\label{fuzz_8h_a5d2bbedddf19ed1808cb7ba336defcc7}} 
+\index{fuzz.h@{fuzz.h}!h\_proto@{h\_proto}}
+\index{h\_proto@{h\_proto}!fuzz.h@{fuzz.h}}
+\doxysubsubsection{\texorpdfstring{h\_proto}{h\_proto}}
+{\footnotesize\ttfamily \+\_\+\+\_\+be16 h\+\_\+proto}
+
+
+
+Definition at line 2 of file fuzz.\+h.
+
+\mbox{\Hypertarget{fuzz_8h_a97dd3055fe7dd35d5e54aced21ed67d3}\label{fuzz_8h_a97dd3055fe7dd35d5e54aced21ed67d3}} 
+\index{fuzz.h@{fuzz.h}!h\_source@{h\_source}}
+\index{h\_source@{h\_source}!fuzz.h@{fuzz.h}}
+\doxysubsubsection{\texorpdfstring{h\_source}{h\_source}}
+{\footnotesize\ttfamily unsigned char h\+\_\+source\mbox{[}\mbox{\hyperlink{sniffer_8c_a9822d89774e0d6ddaa06503950130423}{ETH\+\_\+\+ALEN}}\mbox{]}}
+
+
+
+Definition at line 1 of file fuzz.\+h.
+
+\mbox{\Hypertarget{fuzz_8h_ab13d4931e484995319d4a087418467c0}\label{fuzz_8h_ab13d4931e484995319d4a087418467c0}} 
+\index{fuzz.h@{fuzz.h}!HeaderChecksum@{HeaderChecksum}}
+\index{HeaderChecksum@{HeaderChecksum}!fuzz.h@{fuzz.h}}
+\doxysubsubsection{\texorpdfstring{HeaderChecksum}{HeaderChecksum}}
+{\footnotesize\ttfamily unsigned int Header\+Checksum}
+
+
+
+Definition at line 14 of file fuzz.\+h.
+
+\mbox{\Hypertarget{fuzz_8h_a530582fa3defdb251dbe926d7dcf801f}\label{fuzz_8h_a530582fa3defdb251dbe926d7dcf801f}} 
+\index{fuzz.h@{fuzz.h}!Identification@{Identification}}
+\index{Identification@{Identification}!fuzz.h@{fuzz.h}}
+\doxysubsubsection{\texorpdfstring{Identification}{Identification}}
+{\footnotesize\ttfamily unsigned int Identification}
+
+
+
+Definition at line 9 of file fuzz.\+h.
+
+\mbox{\Hypertarget{fuzz_8h_a6b000e4871078da77b2555e67f117cc5}\label{fuzz_8h_a6b000e4871078da77b2555e67f117cc5}} 
+\index{fuzz.h@{fuzz.h}!ihl@{ihl}}
+\index{ihl@{ihl}!fuzz.h@{fuzz.h}}
+\doxysubsubsection{\texorpdfstring{ihl}{ihl}}
+{\footnotesize\ttfamily unsigned int ihl}
+
+
+
+Definition at line 1 of file fuzz.\+h.
+
+\mbox{\Hypertarget{fuzz_8h_a8740c60c5e3f07190370c4dc29773a4d}\label{fuzz_8h_a8740c60c5e3f07190370c4dc29773a4d}} 
+\index{fuzz.h@{fuzz.h}!Length@{Length}}
+\index{Length@{Length}!fuzz.h@{fuzz.h}}
+\doxysubsubsection{\texorpdfstring{Length}{Length}}
+{\footnotesize\ttfamily unsigned int Length}
+
+
+
+Definition at line 2 of file fuzz.\+h.
+
+\mbox{\Hypertarget{fuzz_8h_a0ee641fb4ed6e33cdce57a24ed0eda82}\label{fuzz_8h_a0ee641fb4ed6e33cdce57a24ed0eda82}} 
+\index{fuzz.h@{fuzz.h}!Protocol@{Protocol}}
+\index{Protocol@{Protocol}!fuzz.h@{fuzz.h}}
+\doxysubsubsection{\texorpdfstring{Protocol}{Protocol}}
+{\footnotesize\ttfamily unsigned int \mbox{\hyperlink{testbit_8c_ac052cf198a54e73e147edb6ae77218c2}{Protocol}}}
+
+
+
+Definition at line 13 of file fuzz.\+h.
+
+\mbox{\Hypertarget{fuzz_8h_a5abafcbeb662fbf7463210ec1057b082}\label{fuzz_8h_a5abafcbeb662fbf7463210ec1057b082}} 
+\index{fuzz.h@{fuzz.h}!Psh@{Psh}}
+\index{Psh@{Psh}!fuzz.h@{fuzz.h}}
+\doxysubsubsection{\texorpdfstring{Psh}{Psh}}
+{\footnotesize\ttfamily unsigned int Psh}
+
+
+
+Definition at line 8 of file fuzz.\+h.
+
+\mbox{\Hypertarget{fuzz_8h_ac132425a70f39fe07667cecb77969764}\label{fuzz_8h_ac132425a70f39fe07667cecb77969764}} 
+\index{fuzz.h@{fuzz.h}!Reserved@{Reserved}}
+\index{Reserved@{Reserved}!fuzz.h@{fuzz.h}}
+\doxysubsubsection{\texorpdfstring{Reserved}{Reserved}}
+{\footnotesize\ttfamily unsigned int Reserved}
+
+
+
+Definition at line 5 of file fuzz.\+h.
+
+\mbox{\Hypertarget{fuzz_8h_a0287739b9c7e42fd58b582dc5686a1a2}\label{fuzz_8h_a0287739b9c7e42fd58b582dc5686a1a2}} 
+\index{fuzz.h@{fuzz.h}!Rst@{Rst}}
+\index{Rst@{Rst}!fuzz.h@{fuzz.h}}
+\doxysubsubsection{\texorpdfstring{Rst}{Rst}}
+{\footnotesize\ttfamily unsigned int Rst}
+
+
+
+Definition at line 9 of file fuzz.\+h.
+
+\mbox{\Hypertarget{fuzz_8h_a40226d0364c72184ed5f3624063107f2}\label{fuzz_8h_a40226d0364c72184ed5f3624063107f2}} 
+\index{fuzz.h@{fuzz.h}!SequenceNumber@{SequenceNumber}}
+\index{SequenceNumber@{SequenceNumber}!fuzz.h@{fuzz.h}}
+\doxysubsubsection{\texorpdfstring{SequenceNumber}{SequenceNumber}}
+{\footnotesize\ttfamily unsigned int Sequence\+Number}
+
+
+
+Definition at line 2 of file fuzz.\+h.
+
+\mbox{\Hypertarget{fuzz_8h_aa1fd9ce3b4c24ea724f1eb45ede7289d}\label{fuzz_8h_aa1fd9ce3b4c24ea724f1eb45ede7289d}} 
+\index{fuzz.h@{fuzz.h}!SourceAddr@{SourceAddr}}
+\index{SourceAddr@{SourceAddr}!fuzz.h@{fuzz.h}}
+\doxysubsubsection{\texorpdfstring{SourceAddr}{SourceAddr}}
+{\footnotesize\ttfamily unsigned int Source\+Addr}
+
+
+
+Definition at line 15 of file fuzz.\+h.
+
+\mbox{\Hypertarget{fuzz_8h_a7585fc7e25fb1fd6535d22999015dca5}\label{fuzz_8h_a7585fc7e25fb1fd6535d22999015dca5}} 
+\index{fuzz.h@{fuzz.h}!SourcePort@{SourcePort}}
+\index{SourcePort@{SourcePort}!fuzz.h@{fuzz.h}}
+\doxysubsubsection{\texorpdfstring{SourcePort}{SourcePort}}
+{\footnotesize\ttfamily short int Source\+Port}
+
+
+
+Definition at line 0 of file fuzz.\+h.
+
+\mbox{\Hypertarget{fuzz_8h_a6822915e5d67832a6909f34a4ce3a61b}\label{fuzz_8h_a6822915e5d67832a6909f34a4ce3a61b}} 
+\index{fuzz.h@{fuzz.h}!Syn@{Syn}}
+\index{Syn@{Syn}!fuzz.h@{fuzz.h}}
+\doxysubsubsection{\texorpdfstring{Syn}{Syn}}
+{\footnotesize\ttfamily unsigned int Syn}
+
+
+
+Definition at line 10 of file fuzz.\+h.
+
+\mbox{\Hypertarget{fuzz_8h_a8de3f2b2e7d406967c9f5ed96ad1322d}\label{fuzz_8h_a8de3f2b2e7d406967c9f5ed96ad1322d}} 
+\index{fuzz.h@{fuzz.h}!TotalLength@{TotalLength}}
+\index{TotalLength@{TotalLength}!fuzz.h@{fuzz.h}}
+\doxysubsubsection{\texorpdfstring{TotalLength}{TotalLength}}
+{\footnotesize\ttfamily unsigned int Total\+Length}
+
+
+
+Definition at line 8 of file fuzz.\+h.
+
+\mbox{\Hypertarget{fuzz_8h_a98a9a765cb7353be09b0be530a704fc0}\label{fuzz_8h_a98a9a765cb7353be09b0be530a704fc0}} 
+\index{fuzz.h@{fuzz.h}!Ttl@{Ttl}}
+\index{Ttl@{Ttl}!fuzz.h@{fuzz.h}}
+\doxysubsubsection{\texorpdfstring{Ttl}{Ttl}}
+{\footnotesize\ttfamily unsigned int Ttl}
+
+
+
+Definition at line 12 of file fuzz.\+h.
+
+\mbox{\Hypertarget{fuzz_8h_a0acab3581af23d3d6376dec4e3a9f5be}\label{fuzz_8h_a0acab3581af23d3d6376dec4e3a9f5be}} 
+\index{fuzz.h@{fuzz.h}!TypeOfService@{TypeOfService}}
+\index{TypeOfService@{TypeOfService}!fuzz.h@{fuzz.h}}
+\doxysubsubsection{\texorpdfstring{TypeOfService}{TypeOfService}}
+{\footnotesize\ttfamily unsigned int Type\+Of\+Service}
+
+
+
+Definition at line 7 of file fuzz.\+h.
+
+\mbox{\Hypertarget{fuzz_8h_a075419be997ebe1b01523c63f350c901}\label{fuzz_8h_a075419be997ebe1b01523c63f350c901}} 
+\index{fuzz.h@{fuzz.h}!Urg@{Urg}}
+\index{Urg@{Urg}!fuzz.h@{fuzz.h}}
+\doxysubsubsection{\texorpdfstring{Urg}{Urg}}
+{\footnotesize\ttfamily unsigned int Urg}
+
+
+
+Definition at line 6 of file fuzz.\+h.
+
+\mbox{\Hypertarget{fuzz_8h_a1358d5aad990c5be1f1f9feede14d966}\label{fuzz_8h_a1358d5aad990c5be1f1f9feede14d966}} 
+\index{fuzz.h@{fuzz.h}!UrgentPointer@{UrgentPointer}}
+\index{UrgentPointer@{UrgentPointer}!fuzz.h@{fuzz.h}}
+\doxysubsubsection{\texorpdfstring{UrgentPointer}{UrgentPointer}}
+{\footnotesize\ttfamily short int Urgent\+Pointer}
+
+
+
+Definition at line 14 of file fuzz.\+h.
+
+\mbox{\Hypertarget{fuzz_8h_a5408ac5df4c170828874e1b10b4c35a0}\label{fuzz_8h_a5408ac5df4c170828874e1b10b4c35a0}} 
+\index{fuzz.h@{fuzz.h}!version@{version}}
+\index{version@{version}!fuzz.h@{fuzz.h}}
+\doxysubsubsection{\texorpdfstring{version}{version}}
+{\footnotesize\ttfamily unsigned int version}
+
+
+
+Definition at line 2 of file fuzz.\+h.
+
+\mbox{\Hypertarget{fuzz_8h_ae06f064bf45f9a9134c4d5ac68ef67e8}\label{fuzz_8h_ae06f064bf45f9a9134c4d5ac68ef67e8}} 
+\index{fuzz.h@{fuzz.h}!Window@{Window}}
+\index{Window@{Window}!fuzz.h@{fuzz.h}}
+\doxysubsubsection{\texorpdfstring{Window}{Window}}
+{\footnotesize\ttfamily short int Window}
+
+
+
+Definition at line 12 of file fuzz.\+h.
+

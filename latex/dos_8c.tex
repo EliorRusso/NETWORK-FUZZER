@@ -1,0 +1,294 @@
+\hypertarget{dos_8c}{}\doxysection{Fuzzing/dos.c File Reference}
+\label{dos_8c}\index{Fuzzing/dos.c@{Fuzzing/dos.c}}
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}itoa.\+c\char`\"{}}\newline
+{\ttfamily \#include $<$math.\+h$>$}\newline
+{\ttfamily \#include $<$malloc.\+h$>$}\newline
+{\ttfamily \#include $<$errno.\+h$>$}\newline
+{\ttfamily \#include $<$sys/socket.\+h$>$}\newline
+{\ttfamily \#include $<$sys/types.\+h$>$}\newline
+{\ttfamily \#include $<$sys/ioctl.\+h$>$}\newline
+{\ttfamily \#include $<$net/if.\+h$>$}\newline
+{\ttfamily \#include $<$netinet/in.\+h$>$}\newline
+{\ttfamily \#include $<$netinet/ip.\+h$>$}\newline
+{\ttfamily \#include $<$netinet/if\+\_\+ether.\+h$>$}\newline
+{\ttfamily \#include $<$netinet/udp.\+h$>$}\newline
+{\ttfamily \#include $<$linux/if\+\_\+packet.\+h$>$}\newline
+{\ttfamily \#include $<$arpa/inet.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}fuzz.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Random\+Values.\+c\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Add\+Protocol.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}webinfo.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Packetlog.\+c\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}protocolheaderdata.\+h\char`\"{}}\newline
+Include dependency graph for dos.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dos_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{dos_8c_ae59a568496a5e175499a75706ab1f079}{DESTMAC0}}~0x08
+\item 
+\#define \mbox{\hyperlink{dos_8c_ac3e66db2ef1b5b05a6961393db6aa7ed}{DESTMAC1}}~0x00
+\item 
+\#define \mbox{\hyperlink{dos_8c_a5ffd89e5963b7c2e8e5716e02cb07543}{DESTMAC2}}~0x27
+\item 
+\#define \mbox{\hyperlink{dos_8c_a5632b62d16fa9a67f946dd1e2afd1114}{DESTMAC3}}~0xfc
+\item 
+\#define \mbox{\hyperlink{dos_8c_a9d61def790d5a54d32b903eb02abf87c}{DESTMAC4}}~0xea
+\item 
+\#define \mbox{\hyperlink{dos_8c_ad6617de27109fb9df184f505a4cfcc24}{DESTMAC5}}~0x10
+\item 
+\#define \mbox{\hyperlink{dos_8c_ad41cebda008e686ea8edd7d4a82b5b5c}{destination\+\_\+ip}}~192.\+168.\+200.\+37
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{dos_8c_a7740c7ab195c03ac140f1f75f633470f}{build}} ()
+\item 
+int \mbox{\hyperlink{dos_8c_a353a2c2f36353c0e3243a6f3a3284303}{send\+Packets}} ()
+\item 
+int \mbox{\hyperlink{dos_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+FILE $\ast$ \mbox{\hyperlink{dos_8c_aa635575cbb7c9cfbe7c673bb280e05be}{Packets\+\_\+\+Sent}}
+\item 
+uint16\+\_\+t \mbox{\hyperlink{dos_8c_afa7ce59930415b5928e00dd7b530048f}{srcportseed}} = 23
+\item 
+unsigned int \mbox{\hyperlink{dos_8c_a298d7e8d0b503e5196d6071e19e69c04}{randomcounter}} = 20
+\item 
+uint16\+\_\+t \mbox{\hyperlink{dos_8c_aaf38d08f9de2212636ea49bb2571400e}{dstportseed}} = 23
+\item 
+unsigned int \mbox{\hyperlink{dos_8c_aa477b14cc000faed6599b713544061fe}{randomcounter2}} = 20
+\item 
+uint16\+\_\+t \mbox{\hyperlink{dos_8c_a8884b4deb324a59ce84b15915a41b258}{checksumseed}} = 23
+\item 
+unsigned int \mbox{\hyperlink{dos_8c_af203ddf3f4de5da314523bdb55075444}{randomcounter3}} = 20
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{dos_8c_ad41cebda008e686ea8edd7d4a82b5b5c}\label{dos_8c_ad41cebda008e686ea8edd7d4a82b5b5c}} 
+\index{dos.c@{dos.c}!destination\_ip@{destination\_ip}}
+\index{destination\_ip@{destination\_ip}!dos.c@{dos.c}}
+\doxysubsubsection{\texorpdfstring{destination\_ip}{destination\_ip}}
+{\footnotesize\ttfamily \#define destination\+\_\+ip~192.\+168.\+200.\+37}
+
+
+
+Definition at line 29 of file dos.\+c.
+
+\mbox{\Hypertarget{dos_8c_ae59a568496a5e175499a75706ab1f079}\label{dos_8c_ae59a568496a5e175499a75706ab1f079}} 
+\index{dos.c@{dos.c}!DESTMAC0@{DESTMAC0}}
+\index{DESTMAC0@{DESTMAC0}!dos.c@{dos.c}}
+\doxysubsubsection{\texorpdfstring{DESTMAC0}{DESTMAC0}}
+{\footnotesize\ttfamily \#define DESTMAC0~0x08}
+
+
+
+Definition at line 23 of file dos.\+c.
+
+\mbox{\Hypertarget{dos_8c_ac3e66db2ef1b5b05a6961393db6aa7ed}\label{dos_8c_ac3e66db2ef1b5b05a6961393db6aa7ed}} 
+\index{dos.c@{dos.c}!DESTMAC1@{DESTMAC1}}
+\index{DESTMAC1@{DESTMAC1}!dos.c@{dos.c}}
+\doxysubsubsection{\texorpdfstring{DESTMAC1}{DESTMAC1}}
+{\footnotesize\ttfamily \#define DESTMAC1~0x00}
+
+
+
+Definition at line 24 of file dos.\+c.
+
+\mbox{\Hypertarget{dos_8c_a5ffd89e5963b7c2e8e5716e02cb07543}\label{dos_8c_a5ffd89e5963b7c2e8e5716e02cb07543}} 
+\index{dos.c@{dos.c}!DESTMAC2@{DESTMAC2}}
+\index{DESTMAC2@{DESTMAC2}!dos.c@{dos.c}}
+\doxysubsubsection{\texorpdfstring{DESTMAC2}{DESTMAC2}}
+{\footnotesize\ttfamily \#define DESTMAC2~0x27}
+
+
+
+Definition at line 25 of file dos.\+c.
+
+\mbox{\Hypertarget{dos_8c_a5632b62d16fa9a67f946dd1e2afd1114}\label{dos_8c_a5632b62d16fa9a67f946dd1e2afd1114}} 
+\index{dos.c@{dos.c}!DESTMAC3@{DESTMAC3}}
+\index{DESTMAC3@{DESTMAC3}!dos.c@{dos.c}}
+\doxysubsubsection{\texorpdfstring{DESTMAC3}{DESTMAC3}}
+{\footnotesize\ttfamily \#define DESTMAC3~0xfc}
+
+
+
+Definition at line 26 of file dos.\+c.
+
+\mbox{\Hypertarget{dos_8c_a9d61def790d5a54d32b903eb02abf87c}\label{dos_8c_a9d61def790d5a54d32b903eb02abf87c}} 
+\index{dos.c@{dos.c}!DESTMAC4@{DESTMAC4}}
+\index{DESTMAC4@{DESTMAC4}!dos.c@{dos.c}}
+\doxysubsubsection{\texorpdfstring{DESTMAC4}{DESTMAC4}}
+{\footnotesize\ttfamily \#define DESTMAC4~0xea}
+
+
+
+Definition at line 27 of file dos.\+c.
+
+\mbox{\Hypertarget{dos_8c_ad6617de27109fb9df184f505a4cfcc24}\label{dos_8c_ad6617de27109fb9df184f505a4cfcc24}} 
+\index{dos.c@{dos.c}!DESTMAC5@{DESTMAC5}}
+\index{DESTMAC5@{DESTMAC5}!dos.c@{dos.c}}
+\doxysubsubsection{\texorpdfstring{DESTMAC5}{DESTMAC5}}
+{\footnotesize\ttfamily \#define DESTMAC5~0x10}
+
+
+
+Definition at line 28 of file dos.\+c.
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{dos_8c_a7740c7ab195c03ac140f1f75f633470f}\label{dos_8c_a7740c7ab195c03ac140f1f75f633470f}} 
+\index{dos.c@{dos.c}!build@{build}}
+\index{build@{build}!dos.c@{dos.c}}
+\doxysubsubsection{\texorpdfstring{build()}{build()}}
+{\footnotesize\ttfamily void build (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+for each ioctl keep diffrent ifreq structure otherwise error may come in sending(sendto )
+
+Definition at line 45 of file dos.\+c.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dos_8c_a7740c7ab195c03ac140f1f75f633470f_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=311pt]{dos_8c_a7740c7ab195c03ac140f1f75f633470f_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{dos_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{dos_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}} 
+\index{dos.c@{dos.c}!main@{main}}
+\index{main@{main}!dos.c@{dos.c}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 151 of file dos.\+c.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dos_8c_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{dos_8c_a353a2c2f36353c0e3243a6f3a3284303}\label{dos_8c_a353a2c2f36353c0e3243a6f3a3284303}} 
+\index{dos.c@{dos.c}!sendPackets@{sendPackets}}
+\index{sendPackets@{sendPackets}!dos.c@{dos.c}}
+\doxysubsubsection{\texorpdfstring{sendPackets()}{sendPackets()}}
+{\footnotesize\ttfamily int send\+Packets (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 143 of file dos.\+c.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{dos_8c_a353a2c2f36353c0e3243a6f3a3284303_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=234pt]{dos_8c_a353a2c2f36353c0e3243a6f3a3284303_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{dos_8c_a8884b4deb324a59ce84b15915a41b258}\label{dos_8c_a8884b4deb324a59ce84b15915a41b258}} 
+\index{dos.c@{dos.c}!checksumseed@{checksumseed}}
+\index{checksumseed@{checksumseed}!dos.c@{dos.c}}
+\doxysubsubsection{\texorpdfstring{checksumseed}{checksumseed}}
+{\footnotesize\ttfamily uint16\+\_\+t checksumseed = 23}
+
+
+
+Definition at line 43 of file dos.\+c.
+
+\mbox{\Hypertarget{dos_8c_aaf38d08f9de2212636ea49bb2571400e}\label{dos_8c_aaf38d08f9de2212636ea49bb2571400e}} 
+\index{dos.c@{dos.c}!dstportseed@{dstportseed}}
+\index{dstportseed@{dstportseed}!dos.c@{dos.c}}
+\doxysubsubsection{\texorpdfstring{dstportseed}{dstportseed}}
+{\footnotesize\ttfamily uint16\+\_\+t dstportseed = 23}
+
+
+
+Definition at line 41 of file dos.\+c.
+
+\mbox{\Hypertarget{dos_8c_aa635575cbb7c9cfbe7c673bb280e05be}\label{dos_8c_aa635575cbb7c9cfbe7c673bb280e05be}} 
+\index{dos.c@{dos.c}!Packets\_Sent@{Packets\_Sent}}
+\index{Packets\_Sent@{Packets\_Sent}!dos.c@{dos.c}}
+\doxysubsubsection{\texorpdfstring{Packets\_Sent}{Packets\_Sent}}
+{\footnotesize\ttfamily FILE$\ast$ Packets\+\_\+\+Sent}
+
+
+
+Definition at line 38 of file dos.\+c.
+
+\mbox{\Hypertarget{dos_8c_a298d7e8d0b503e5196d6071e19e69c04}\label{dos_8c_a298d7e8d0b503e5196d6071e19e69c04}} 
+\index{dos.c@{dos.c}!randomcounter@{randomcounter}}
+\index{randomcounter@{randomcounter}!dos.c@{dos.c}}
+\doxysubsubsection{\texorpdfstring{randomcounter}{randomcounter}}
+{\footnotesize\ttfamily unsigned int randomcounter = 20}
+
+
+
+Definition at line 40 of file dos.\+c.
+
+\mbox{\Hypertarget{dos_8c_aa477b14cc000faed6599b713544061fe}\label{dos_8c_aa477b14cc000faed6599b713544061fe}} 
+\index{dos.c@{dos.c}!randomcounter2@{randomcounter2}}
+\index{randomcounter2@{randomcounter2}!dos.c@{dos.c}}
+\doxysubsubsection{\texorpdfstring{randomcounter2}{randomcounter2}}
+{\footnotesize\ttfamily unsigned int randomcounter2 = 20}
+
+
+
+Definition at line 42 of file dos.\+c.
+
+\mbox{\Hypertarget{dos_8c_af203ddf3f4de5da314523bdb55075444}\label{dos_8c_af203ddf3f4de5da314523bdb55075444}} 
+\index{dos.c@{dos.c}!randomcounter3@{randomcounter3}}
+\index{randomcounter3@{randomcounter3}!dos.c@{dos.c}}
+\doxysubsubsection{\texorpdfstring{randomcounter3}{randomcounter3}}
+{\footnotesize\ttfamily unsigned int randomcounter3 = 20}
+
+
+
+Definition at line 44 of file dos.\+c.
+
+\mbox{\Hypertarget{dos_8c_afa7ce59930415b5928e00dd7b530048f}\label{dos_8c_afa7ce59930415b5928e00dd7b530048f}} 
+\index{dos.c@{dos.c}!srcportseed@{srcportseed}}
+\index{srcportseed@{srcportseed}!dos.c@{dos.c}}
+\doxysubsubsection{\texorpdfstring{srcportseed}{srcportseed}}
+{\footnotesize\ttfamily uint16\+\_\+t srcportseed = 23}
+
+
+
+Definition at line 39 of file dos.\+c.
+

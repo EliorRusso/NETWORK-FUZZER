@@ -1,0 +1,211 @@
+\hypertarget{RandomValues_8c}{}\doxysection{Fuzzing/\+Random\+Values.c File Reference}
+\label{RandomValues_8c}\index{Fuzzing/RandomValues.c@{Fuzzing/RandomValues.c}}
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$time.\+h$>$}\newline
+Include dependency graph for Random\+Values.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=268pt]{RandomValues_8c__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{RandomValues_8c__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+unsigned int \mbox{\hyperlink{RandomValues_8c_abcd070df4b30d266274be43ba7334c67}{print\+Randoms}} (int lower, int upper, int count)
+\item 
+unsigned int \mbox{\hyperlink{RandomValues_8c_a4f9d5466a15a5c75896c2b0b46053095}{random\+Source\+Port}} (uint16\+\_\+t src\+\_\+port)
+\item 
+unsigned int \mbox{\hyperlink{RandomValues_8c_a7050fbb9f7f1ee5e9af756239bfa1b40}{random\+Dest\+Port}} (uint16\+\_\+t dst\+\_\+port)
+\item 
+unsigned int \mbox{\hyperlink{RandomValues_8c_a827741fcc1ab9b691aaca9661f8380be}{random\+QOS}} (uint8\+\_\+t qos)
+\item 
+unsigned int \mbox{\hyperlink{RandomValues_8c_a38c699ce2c044ade8087b730df760e39}{random\+Identification}} (uint8\+\_\+t identification)
+\item 
+unsigned int \mbox{\hyperlink{RandomValues_8c_ab56998e6db8396b9b99f8be1736bb532}{random\+Ttl}} (uint8\+\_\+t \mbox{\hyperlink{fuzz_8h_a98a9a765cb7353be09b0be530a704fc0}{Ttl}})
+\item 
+void \mbox{\hyperlink{RandomValues_8c_a3328adb13d555c86bd9a6df0b416fced}{random\+Protocol}} (uint8\+\_\+t proto)
+\item 
+unsigned int \mbox{\hyperlink{RandomValues_8c_a45a163e448b9a42fcb89c06f561ab090}{random\+Checksum}} (uint16\+\_\+t checksum)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{RandomValues_8c_abcd070df4b30d266274be43ba7334c67}\label{RandomValues_8c_abcd070df4b30d266274be43ba7334c67}} 
+\index{RandomValues.c@{RandomValues.c}!printRandoms@{printRandoms}}
+\index{printRandoms@{printRandoms}!RandomValues.c@{RandomValues.c}}
+\doxysubsubsection{\texorpdfstring{printRandoms()}{printRandoms()}}
+{\footnotesize\ttfamily unsigned int print\+Randoms (\begin{DoxyParamCaption}\item[{int}]{lower,  }\item[{int}]{upper,  }\item[{int}]{count }\end{DoxyParamCaption})}
+
+
+
+Definition at line 4 of file Random\+Values.\+c.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{RandomValues_8c_abcd070df4b30d266274be43ba7334c67_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{RandomValues_8c_a45a163e448b9a42fcb89c06f561ab090}\label{RandomValues_8c_a45a163e448b9a42fcb89c06f561ab090}} 
+\index{RandomValues.c@{RandomValues.c}!randomChecksum@{randomChecksum}}
+\index{randomChecksum@{randomChecksum}!RandomValues.c@{RandomValues.c}}
+\doxysubsubsection{\texorpdfstring{randomChecksum()}{randomChecksum()}}
+{\footnotesize\ttfamily unsigned int random\+Checksum (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{checksum }\end{DoxyParamCaption})}
+
+
+
+Definition at line 46 of file Random\+Values.\+c.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=306pt]{RandomValues_8c_a45a163e448b9a42fcb89c06f561ab090_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{RandomValues_8c_a7050fbb9f7f1ee5e9af756239bfa1b40}\label{RandomValues_8c_a7050fbb9f7f1ee5e9af756239bfa1b40}} 
+\index{RandomValues.c@{RandomValues.c}!randomDestPort@{randomDestPort}}
+\index{randomDestPort@{randomDestPort}!RandomValues.c@{RandomValues.c}}
+\doxysubsubsection{\texorpdfstring{randomDestPort()}{randomDestPort()}}
+{\footnotesize\ttfamily unsigned int random\+Dest\+Port (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{dst\+\_\+port }\end{DoxyParamCaption})}
+
+
+
+Definition at line 18 of file Random\+Values.\+c.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=297pt]{RandomValues_8c_a7050fbb9f7f1ee5e9af756239bfa1b40_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{RandomValues_8c_a38c699ce2c044ade8087b730df760e39}\label{RandomValues_8c_a38c699ce2c044ade8087b730df760e39}} 
+\index{RandomValues.c@{RandomValues.c}!randomIdentification@{randomIdentification}}
+\index{randomIdentification@{randomIdentification}!RandomValues.c@{RandomValues.c}}
+\doxysubsubsection{\texorpdfstring{randomIdentification()}{randomIdentification()}}
+{\footnotesize\ttfamily unsigned int random\+Identification (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{identification }\end{DoxyParamCaption})}
+
+
+
+Definition at line 30 of file Random\+Values.\+c.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=319pt]{RandomValues_8c_a38c699ce2c044ade8087b730df760e39_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{RandomValues_8c_a38c699ce2c044ade8087b730df760e39_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{RandomValues_8c_a3328adb13d555c86bd9a6df0b416fced}\label{RandomValues_8c_a3328adb13d555c86bd9a6df0b416fced}} 
+\index{RandomValues.c@{RandomValues.c}!randomProtocol@{randomProtocol}}
+\index{randomProtocol@{randomProtocol}!RandomValues.c@{RandomValues.c}}
+\doxysubsubsection{\texorpdfstring{randomProtocol()}{randomProtocol()}}
+{\footnotesize\ttfamily void random\+Protocol (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{proto }\end{DoxyParamCaption})}
+
+
+
+Definition at line 41 of file Random\+Values.\+c.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=295pt]{RandomValues_8c_a3328adb13d555c86bd9a6df0b416fced_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{RandomValues_8c_a827741fcc1ab9b691aaca9661f8380be}\label{RandomValues_8c_a827741fcc1ab9b691aaca9661f8380be}} 
+\index{RandomValues.c@{RandomValues.c}!randomQOS@{randomQOS}}
+\index{randomQOS@{randomQOS}!RandomValues.c@{RandomValues.c}}
+\doxysubsubsection{\texorpdfstring{randomQOS()}{randomQOS()}}
+{\footnotesize\ttfamily unsigned int random\+QOS (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{qos }\end{DoxyParamCaption})}
+
+
+
+Definition at line 24 of file Random\+Values.\+c.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=276pt]{RandomValues_8c_a827741fcc1ab9b691aaca9661f8380be_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=309pt]{RandomValues_8c_a827741fcc1ab9b691aaca9661f8380be_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{RandomValues_8c_a4f9d5466a15a5c75896c2b0b46053095}\label{RandomValues_8c_a4f9d5466a15a5c75896c2b0b46053095}} 
+\index{RandomValues.c@{RandomValues.c}!randomSourcePort@{randomSourcePort}}
+\index{randomSourcePort@{randomSourcePort}!RandomValues.c@{RandomValues.c}}
+\doxysubsubsection{\texorpdfstring{randomSourcePort()}{randomSourcePort()}}
+{\footnotesize\ttfamily unsigned int random\+Source\+Port (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{src\+\_\+port }\end{DoxyParamCaption})}
+
+
+
+Definition at line 12 of file Random\+Values.\+c.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=308pt]{RandomValues_8c_a4f9d5466a15a5c75896c2b0b46053095_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{RandomValues_8c_ab56998e6db8396b9b99f8be1736bb532}\label{RandomValues_8c_ab56998e6db8396b9b99f8be1736bb532}} 
+\index{RandomValues.c@{RandomValues.c}!randomTtl@{randomTtl}}
+\index{randomTtl@{randomTtl}!RandomValues.c@{RandomValues.c}}
+\doxysubsubsection{\texorpdfstring{randomTtl()}{randomTtl()}}
+{\footnotesize\ttfamily unsigned int random\+Ttl (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{Ttl }\end{DoxyParamCaption})}
+
+
+
+Definition at line 36 of file Random\+Values.\+c.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=268pt]{RandomValues_8c_ab56998e6db8396b9b99f8be1736bb532_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=301pt]{RandomValues_8c_ab56998e6db8396b9b99f8be1736bb532_icgraph}
+\end{center}
+\end{figure}

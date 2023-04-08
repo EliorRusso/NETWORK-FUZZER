@@ -1,0 +1,138 @@
+\hypertarget{sniffer_8c}{}\doxysection{sniffer.\+c File Reference}
+\label{sniffer_8c}\index{sniffer.c@{sniffer.c}}
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$netinet/ip\+\_\+icmp.\+h$>$}\newline
+{\ttfamily \#include $<$netinet/udp.\+h$>$}\newline
+{\ttfamily \#include $<$netinet/tcp.\+h$>$}\newline
+{\ttfamily \#include $<$sys/socket.\+h$>$}\newline
+{\ttfamily \#include $<$arpa/inet.\+h$>$}\newline
+{\ttfamily \#include $<$linux/types.\+h$>$}\newline
+{\ttfamily \#include $<$net/ethernet.\+h$>$}\newline
+{\ttfamily \#include $<$features.\+h$>$}\newline
+{\ttfamily \#include $<$sys/types.\+h$>$}\newline
+{\ttfamily \#include $<$netinet/in.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}fuzz.\+h\char`\"{}}\newline
+Include dependency graph for sniffer.\+c\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{sniffer_8c__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{sniffer_8c_a9822d89774e0d6ddaa06503950130423}{ETH\+\_\+\+ALEN}}~6
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{sniffer_8c_ad36d20f22c2f5c15bacb964ef98b7d87}{Socket\+Connect}} (unsigned char $\ast$buffer)
+\item 
+void \mbox{\hyperlink{sniffer_8c_aed588d34edd63b539025e8ef2b8ea683}{Printing\+Packets}} (unsigned char $\ast$buffer)
+\item 
+int \mbox{\hyperlink{sniffer_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{sniffer_8c_a5d2fd3f057bc46a52381a1b79e949cb3}{sock\+\_\+raw}}
+\item 
+struct sockaddr\+\_\+in source \mbox{\hyperlink{sniffer_8c_ab763edcb7c251f62a3c733f71d26eea0}{dest}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{sniffer_8c_a9822d89774e0d6ddaa06503950130423}\label{sniffer_8c_a9822d89774e0d6ddaa06503950130423}} 
+\index{sniffer.c@{sniffer.c}!ETH\_ALEN@{ETH\_ALEN}}
+\index{ETH\_ALEN@{ETH\_ALEN}!sniffer.c@{sniffer.c}}
+\doxysubsubsection{\texorpdfstring{ETH\_ALEN}{ETH\_ALEN}}
+{\footnotesize\ttfamily \#define ETH\+\_\+\+ALEN~6}
+
+
+
+Definition at line 17 of file sniffer.\+c.
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{sniffer_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{sniffer_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}} 
+\index{sniffer.c@{sniffer.c}!main@{main}}
+\index{main@{main}!sniffer.c@{sniffer.c}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 110 of file sniffer.\+c.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=248pt]{sniffer_8c_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{sniffer_8c_aed588d34edd63b539025e8ef2b8ea683}\label{sniffer_8c_aed588d34edd63b539025e8ef2b8ea683}} 
+\index{sniffer.c@{sniffer.c}!PrintingPackets@{PrintingPackets}}
+\index{PrintingPackets@{PrintingPackets}!sniffer.c@{sniffer.c}}
+\doxysubsubsection{\texorpdfstring{PrintingPackets()}{PrintingPackets()}}
+{\footnotesize\ttfamily void Printing\+Packets (\begin{DoxyParamCaption}\item[{unsigned char $\ast$}]{buffer }\end{DoxyParamCaption})}
+
+
+
+Definition at line 40 of file sniffer.\+c.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=248pt]{sniffer_8c_aed588d34edd63b539025e8ef2b8ea683_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{sniffer_8c_ad36d20f22c2f5c15bacb964ef98b7d87}\label{sniffer_8c_ad36d20f22c2f5c15bacb964ef98b7d87}} 
+\index{sniffer.c@{sniffer.c}!SocketConnect@{SocketConnect}}
+\index{SocketConnect@{SocketConnect}!sniffer.c@{sniffer.c}}
+\doxysubsubsection{\texorpdfstring{SocketConnect()}{SocketConnect()}}
+{\footnotesize\ttfamily void Socket\+Connect (\begin{DoxyParamCaption}\item[{unsigned char $\ast$}]{buffer }\end{DoxyParamCaption})}
+
+
+
+Definition at line 21 of file sniffer.\+c.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=246pt]{sniffer_8c_ad36d20f22c2f5c15bacb964ef98b7d87_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{sniffer_8c_ab763edcb7c251f62a3c733f71d26eea0}\label{sniffer_8c_ab763edcb7c251f62a3c733f71d26eea0}} 
+\index{sniffer.c@{sniffer.c}!dest@{dest}}
+\index{dest@{dest}!sniffer.c@{sniffer.c}}
+\doxysubsubsection{\texorpdfstring{dest}{dest}}
+{\footnotesize\ttfamily struct sockaddr\+\_\+in source dest}
+
+
+
+Definition at line 19 of file sniffer.\+c.
+
+\mbox{\Hypertarget{sniffer_8c_a5d2fd3f057bc46a52381a1b79e949cb3}\label{sniffer_8c_a5d2fd3f057bc46a52381a1b79e949cb3}} 
+\index{sniffer.c@{sniffer.c}!sock\_raw@{sock\_raw}}
+\index{sock\_raw@{sock\_raw}!sniffer.c@{sniffer.c}}
+\doxysubsubsection{\texorpdfstring{sock\_raw}{sock\_raw}}
+{\footnotesize\ttfamily int sock\+\_\+raw}
+
+
+
+Definition at line 19 of file sniffer.\+c.
+
